@@ -1,7 +1,7 @@
 <template>
-	<el-card>
-		
-	</el-card>
+	<div>
+		123123
+	</div>
 </template>
 
 <script>
