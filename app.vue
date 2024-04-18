@@ -1,12 +1,21 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+	<NuxtLayout>
+		<NuxtPage />
+	</NuxtLayout>
 </template>
 
-<style lang="scss" scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	a:hover {
+		color: black
+	}
 </style>
