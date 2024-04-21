@@ -3,19 +3,19 @@
 		<section class="about-dev">
 			<header class="profile-card_header">
 				<div class="profile-card_header-container">
-					<div class="profile-card_header-imgbox">
-
-					</div>
+					<div class="profile-card_header-imgbox"></div>
 					<h1>名称 <span>爱好</span></h1>
 				</div>
 			</header>
 			<div class="profile-card_about">
 				<h2>个人简介</h2>
-				<p style="padding-top: 20px;">I'm an aspiring ruler of hoomans from Chicago, looking for my fur-ever home. I like treats and
+				<p style="padding-top: 20px;">I'm an aspiring ruler of hoomans from Chicago, looking for my fur-ever
+					home. I like treats and
 					playing and treats. And treats. I'd do well in a home where hoomans give me lots of treats!</p>
 				<div style="display:flex;justify-content: space-between;">
 					<footer class="profile-card_footer_left">
-						<p><a class="back-to-profile back-to-profile-left" href="#">登录</a></p>
+						<p><Nuxt-link to="/login" @click="handleClick"
+								class="back-to-profile back-to-profile-left">登录</Nuxt-link></p>
 					</footer>
 					<footer class="profile-card_footer_right">
 						<p><a class="back-to-profile back-to-profile-right" href="#">个人中心</a></p>
@@ -26,7 +26,13 @@
 	</div>
 </template>
 
-<script>
+<script setup lang="ts">
+	import useLoginStore from '@/store/loginStore';
+	const store = useLoginStore()
+	const handleClick = () => {
+		store.ShowHide = false
+		console.log(store.ShowHide)
+	}
 </script>
 
 <style scoped>
@@ -179,7 +185,7 @@
 		margin: 0 0.75em;
 		color: #222;
 	}
-	
+
 	.back-to-profile-left::before {
 		content: "\25c0";
 		margin: 0 0.75em;

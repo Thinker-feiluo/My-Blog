@@ -7,10 +7,18 @@ const useLoginStore = defineStore("loginStore", {
 		ShowHide: true
 	}),
 	actions: {
-		SortShow() {
-
+		async Login(username, password) {
+			const res = await getFetchData({
+				url: "/api/api/register",
+				opts: {
+					username,
+					password
+				}
+			})
+			return res
 		}
-	}
+	},
+	persist: true,
 })
 
 export default useLoginStore
